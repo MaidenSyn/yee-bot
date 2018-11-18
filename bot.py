@@ -27,6 +27,4 @@ async def on_message(message):
 
 
 
-if __name__ == '__main__':
-    import config
-    client.run(config.token)
+client.run(os.gentenv('TOKEN'))
