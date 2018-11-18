@@ -18,7 +18,7 @@ async def on_ready():
 @client.event
 async def on_message(message):
     userID = message.author.id
-    if message.content.startswith("ye") and userID != "@Yee Bot#5127" :
+    if message.content.startswith("ye"):
         userID = message.author.id
         await client.send_message(message.channel, "<@%s> Alexa this is so sad can we play despacito" % (userID))
         await client.send_message(message.channel, "https://pbs.twimg.com/profile_images/504715443479670784/fauyuPDy_400x400.png")
