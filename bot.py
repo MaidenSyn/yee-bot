@@ -4,7 +4,7 @@ from discord.ext.commands import Bot
 import asyncio
 import time
 import os
-client = discord.Client()
+Client = discord.Client()
 #prefix
 client = commands.Bot(client,commmand_prefix = "yee")
 #image
