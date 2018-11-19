@@ -10,6 +10,7 @@ client = commands.Bot(client,commmand_prefix = "yee")
 #image
 yee = discord.Embed()
 yee.set_image(url="https://pbs.twimg.com/profile_images/504715443479670784/fauyuPDy_400x400.png")
+emoji = await self.bot.create_custom_emoji(server, name="yeemoji", image="http://dankmaymays.com/yee/intensifies/disappoint.png"")
 #online
 @client.event
 async def on_ready():
@@ -24,7 +25,7 @@ async def on_message(message):
          if "y" in message.content.lower():
             userID = message.author.id
             await client.send_message(message.channel, "<@%s> Alexa this is so sad can we play despacito" % (userID))
-            await client.send_message(message.channel, "https://pbs.twimg.com/profile_images/504715443479670784/fauyuPDy_400x400.png")
+            await client.send_message(message.channel, ":yeemoji:")
     
 
 
