@@ -18,8 +18,11 @@ async def on_ready():
     print("ID: " + client.user.id)
 @client.event
 async def on_message(message):
-    userID = message.author.id
-    if message.content.startswith("ye"):
+    # we do not want the bot to reply to itself
+    if message.author == client.user:
+        return
+    if message.author.bot: return
+    if message.content.startswith('y') or ('Y'):
         userID = message.author.id
         await client.send_message(message.channel, "<@%s> Alexa this is so sad can we play despacito" % (userID))
         await client.send_message(message.channel, "https://pbs.twimg.com/profile_images/504715443479670784/fauyuPDy_400x400.png")
