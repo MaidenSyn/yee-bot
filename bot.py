@@ -21,7 +21,7 @@ async def on_message(message):
     # we do not want the bot to reply to itself
     if message.author != client.user:
    
-         if "y" in message.content.lower():
+         if "unfunny" in message.content.lower():
             userID = message.author.id
             await client.send_message(message.channel, "<@%s> Yee." % (userID))
 
